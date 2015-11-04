@@ -18,7 +18,7 @@ Administrator gives response on Dispatcher's applicatoin and closes them with st
 
 ********************************** INSTRUCTION *************************************************
 
-Before starting applicaton please don't forget about turn on service MySQL also please add libraries from folder Airlines/lib
+Before starting applicaton please don't forget about turn on service MySQL and change MySQL settings in file Airlines/WebContent/META-INF/context.xml, also please add libraries from folder Airlines/lib
 (https://github.com/feanor777/Airlines/tree/master/lib) to folder '&lt;APACHE_TOMCAT_HOME&gt;/lib' !
 After starting application, use this address in browser http://127.0.0.1:8080/Airlines
 <br>
