@@ -19,7 +19,7 @@ Administrator gives response on Dispatcher's applicatoin and closes them with st
 ********************************** INSTRUCTION *************************************************
 
 Before starting applicaton please don't forget about turn on service MySQL also please add libraries from folder Airlines/lib
-(https://github.com/feanor777/Airlines/tree/master/lib) to folder '<APACHE_TOMCAT_HOME>/lib' !
+(https://github.com/feanor777/Airlines/tree/master/lib) to folder '&lt;APACHE_TOMCAT_HOME&gt;/lib' !
 After starting application, use this address in browser http://127.0.0.1:8080/Airlines
 <br>
 To log in system as administrator or dispatcher use next login and passwords:<br>
