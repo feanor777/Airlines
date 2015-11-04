@@ -1,0 +1,49 @@
+<%@ page import="ua.nure.sharov.Airlines.db.Role"%>
+<%@ include file="/WEB-INF/jspf/page_settings.jspf"%>
+<%@ include file="/WEB-INF/jspf/tagslib.jspf"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@ page pageEncoding="UTF-8" %>
+
+<jsp:useBean id="usd" scope="page"
+	class="ua.nure.sharov.Airlines.currency.Currency" />
+
+<div class="topFive">
+	<h3>TOP 5 nearest flights</h3>
+	<table>
+		<thead>
+			<tr>
+				<td>№</td>
+				<td><fmt:message key="flightListNumber_jsp.table.number" /></td>
+				<td><fmt:message key="index_jsp.table.from" /></td>
+				<td><fmt:message key="index_jsp.table.to" /></td>
+				<td><fmt:message key="index_jsp.table.date" /></td>
+				<td><fmt:message key="flightListNumber_jsp.table.price" /></td>
+			</tr>
+		</thead>
+
+		<c:set var="i" value="0" />
+		<c:forEach var="item" items="${topFive}">
+			<c:set var="i" value="${i+1}" />
+			<tr>
+				<td><c:out value="${i}" /></td>
+				<td>${item.number}</td>
+				<td>${item.from}</td>
+				<td>${item.to}</td>
+				<td>${item.date_of_departure}</td>
+				<td><c:choose>
+						<c:when test="${currentLocale eq 'en'}">
+							<fmt:setLocale value="en_US" />
+							<fmt:formatNumber type="currency"
+								value="${item.price / usd.getUSDCurrency()}" />
+							<br />
+						</c:when>
+						<c:otherwise>
+							<fmt:setLocale value="uk_UA" />
+							<fmt:formatNumber type="currency" value="${item.price}" />
+							<fmt:setLocale value="ru_RU" />
+						</c:otherwise>
+					</c:choose></td>
+			</tr>
+		</c:forEach>
+	</table>
+</div>

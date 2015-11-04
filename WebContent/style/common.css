@@ -1,0 +1,72 @@
+@CHARSET "UTF-8";
+
+body {
+	margin: 15px;
+	background-color: 78AACD;
+}
+
+table {
+	border: thin dotted grey;
+	margin: 10px;
+	padding: 10px;
+}
+
+th {
+	text-align: right;
+	vertical-align: top;
+	padding-right: 10px;
+	padding-top: 2px;
+}
+
+td {
+	vertical-align: top;
+	padding-bottom: 10px;
+}
+
+legend {
+	margin: 15px;
+	font: bold 24px/20px serif;
+	color: 133045;
+}
+
+fieldset {
+	position: absolute;
+	margin: auto;
+}
+
+a {
+	color: 29516D;
+	font-style: bold;
+	font-size: 95%;
+}
+
+.button {
+	margin: 4px;
+	margin-left: 10px;
+	font-size: 14px;
+}
+
+table.withBorder {
+	border: solid 1px;
+	border-collapse: collapse;
+}
+
+table.withBorder th, .withBorder td {
+	border: dotted 1px;
+	padding: 5px;
+	text-align: inherit;
+}
+
+table.withBorder thead {
+	text-align: center;
+}
+
+tr td.textCenter {
+	text-align: center;
+}
+
+#flightSelect {
+	border: thin dotted gray;
+	margin-left: 10px;
+	margin-bottom: 5px;
+}

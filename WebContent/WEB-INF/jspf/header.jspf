@@ -1,0 +1,79 @@
+<%--=========================================================================== 
+Header (top area). 
+===========================================================================--%> 
+
+<%@ page import="ua.nure.sharov.Airlines.db.Role" %>
+<%@ include file="/WEB-INF/jspf/page_settings.jspf" %>
+<%@ include file="/WEB-INF/jspf/tagslib.jspf" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+
+<div id="header">
+
+<%--=========================================================================== 
+This is the user menu. 
+===========================================================================--%> 
+
+<div class="leftHeader">
+
+	<c:choose>
+
+<%--=========================================================================== 
+This way we define the ADMIN MENU. 
+===========================================================================--%> 
+		<c:when test="${userRole.name == 'administrator' }">
+			<a href="controller?command=administratorHomePage"><fmt:message key="header_jspf.home_page" />
+			</a> &nbsp;
+		</c:when>
+
+		
+<%--=========================================================================== 
+This way we define the DISPATCHER MENU.
+===========================================================================--%> 
+		<c:when test="${userRole.name == 'dispatcher'}">
+			<a href="controller?command=dispatcherHomePage"><fmt:message key="header_jspf.home_page" />
+			</a> &nbsp;
+		</c:when>
+	</c:choose>
+	
+</div>
+
+<%--=========================================================================== 
+This way we define the menu located at the right of header. 
+===========================================================================--%> 
+
+<%--=========================================================================== 
+Type link to logout  
+===========================================================================--%> 
+
+<c:if test="${empty user}">
+	<div class="rightHeader">
+		<a href="login.jsp"><fmt:message key="header_jspf.login" /></a>
+	</div>
+</c:if>
+
+<c:if test="${not empty user}">
+	<div class="rightHeader">
+		<a href="controller?command=logout">
+			<fmt:message key="header_jspf.logout" />
+		</a> 	
+	</div>
+</c:if>
+
+<div class="rightHeader">
+<%--=========================================================================== 
+Type user name if the user object is presented in the current session.  
+===========================================================================--%>
+	<c:if test="${not empty user }">
+		<c:out value="${user.first_name} ${user.last_name}" />
+	</c:if>
+	
+<%--=========================================================================== 
+Type user role name if the user object is presented in the current session.  
+===========================================================================--%> 
+	<c:if test="${not empty userRole}">
+		<c:out value="(${userRole.name})" />
+	</c:if>
+
+</div>
+
+</div>

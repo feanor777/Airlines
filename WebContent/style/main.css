@@ -1,0 +1,132 @@
+body {
+	margin: 0;
+	background: url(images/plane.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.left_logo {
+	float: left;
+	padding-left: 50px;
+}
+
+.left_logo p {
+	color: yellow;
+}
+
+.nav {
+	float: right;
+	padding-right: 50px;
+	padding-top: 15px;
+	line-height: 140%;
+}
+
+.nav a {
+	color: #5a5a5a;
+	font-size: 11px;
+	font-weight: bold;
+	padding: 14px 10px;
+	text-transform: uppercase;
+}
+
+.nav #header {
+	text-align: right;
+	line-height: 110%;
+}
+
+.container {
+	overflow: hidden;
+}
+
+.jumbotron .container h1 {
+	margin: 50px 0;
+}
+
+.forms {
+	margin: auto;
+	width: 600px;
+	font-size: 20px;
+	color: 1D1E46;
+	font-weight: bold;
+}
+
+#lightFont {
+	color: FFE83D;
+}
+
+.jumbotron .form_find_flights {
+	float: left;
+	overflow: hidden;
+	padding-right: 50px;
+	padding-left: 30px;
+}
+
+.jumbotron .form_find_flights_number {
+	float: right;
+}
+
+.btn {
+	background: #29a9ff;
+	background-image: -webkit-linear-gradient(top, #29a9ff, #dbe04e);
+	background-image: -moz-linear-gradient(top, #29a9ff, #dbe04e);
+	background-image: -ms-linear-gradient(top, #29a9ff, #dbe04e);
+	background-image: -o-linear-gradient(top, #29a9ff, #dbe04e);
+	background-image: linear-gradient(to bottom, #29a9ff, #dbe04e);
+	-webkit-border-radius: 28;
+	-moz-border-radius: 28;
+	border-radius: 16px;
+	font-family: Arial;
+	color: #ffffff;
+	font-size: 14px;
+	padding: 5px 10px 5px 10px;
+	text-decoration: none;
+}
+
+.btn:hover {
+	cursor: pointer;
+}
+
+.jumbotron h1 {
+	text-align: center;
+	color: #efefef;
+	font-size: 48px;
+	font-family: 'Shift', sans-serif;
+	font-weight: bold;
+}
+
+.jumbotron h2 {
+	font-size: 17px;
+	color: #efefef;
+	-webkit-margin-before: 0;
+	-webkit-margin-after: 0;
+	-webkit-margin-start: 0;
+	-webkit-margin-end: 0s;
+}
+
+.jumbotron h3 {
+	text-align: center;
+	color: #FFE200;
+	font-size: 28px;
+	font-family: 'Shift', sans-serif;
+	font-weight: bold;
+}
+
+table {
+	margin: auto; 
+	border-collapse: collapse;
+	text-align: center;
+	color: 062A64;
+	background-color: A4BFE9;
+}
+
+td, th {
+	border: thin dotted;
+	padding: 5px;
+}
+
+thead {
+	font-weight: bold;
+	border: thin solid;
+}

@@ -1,0 +1,21 @@
+@CHARSET "UTF-8";
+
+.leftHeader {
+	float: left;
+	text-align: left;
+}
+
+.rightHeader {
+	float: right; 
+	text-align: right;
+}
+
+.rightHeader a {
+	padding-left: 3px;
+}
+
+#header {
+	padding: 7px;
+	margin-bottom: 20px;
+	color: 133045;
+}
